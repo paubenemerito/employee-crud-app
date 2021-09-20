@@ -1,6 +1,7 @@
 function onFormSubmit() {
   var formData = readFormData();
   insertNewRecord(formData);
+  resetForm();
 }
 
 function readFormData() {
@@ -28,3 +29,9 @@ function insertNewRecord(data) {
                     <a>Delete</a>`;
 }
 
+function resetForm() {
+  document.getElementById("fullName").value = "";
+  document.getElementById("empCode").value = "";
+  document.getElementById("salary").value = "";
+  document.getElementById("city").value = "";
+}
